@@ -11,6 +11,15 @@ def encode(password): # Aiden Oswalts encoder
             encoded_string += '3'
     return encoded_string
 
+def decode(password):
+	decoded_string = ''
+	for digit in password:
+		if 0 <= int(digit) <= 2:
+			decoded_string += str((int(digit) - 3) + 10)
+		else:
+			decoded_string += str(int(digit) - 3)
+	return decoded_string
+
 if __name__ == '__main__':
     end = False
     while end == False: # Controls when function ends
