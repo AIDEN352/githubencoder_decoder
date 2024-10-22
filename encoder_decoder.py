@@ -4,11 +4,11 @@ def encode(password): # Aiden Oswalts encoder
         if 0 <= int(item) <= 6:
             encoded_string += str(int(item) + 3)
         elif item == '7':
-            encoded_string += '1'
+            encoded_string += '0'
         elif item == '8':
-            encoded_string += '2'
+            encoded_string += '1'
         elif item == '9':
-            encoded_string += '3'
+            encoded_string += '2'
     return encoded_string
 
 if __name__ == '__main__':
